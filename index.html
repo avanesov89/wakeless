@@ -78,6 +78,25 @@
       font-size: 13px;
       color: rgba(255,255,255,0.6);
     }
+
+    /* On small screens, keep content anchored to the top so the CTA isn't pushed too low. */
+    @media (max-width: 640px) {
+      body {
+        align-items: flex-start;
+        padding-top: calc(18px + env(safe-area-inset-top));
+        padding-bottom: calc(18px + env(safe-area-inset-bottom));
+      }
+      .card {
+        padding: 24px;
+      }
+      .logo {
+        width: 180px;
+        height: 180px;
+      }
+      h1 {
+        font-size: 38px;
+      }
+    }
   </style>
 </head>
 <body>
